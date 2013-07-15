@@ -4,8 +4,7 @@ var dat = new Buffer(100);
 var err = new Buffer(50);
 var fs = require('fs');
 app.get('/', function(request, response) {
-  response.send(fs.readFileSync('index.txt', 'utf8'){
-//function(err,dat){
+  response.send(fs.readFileSync('index.txt', function(err,dat){
  if (err) { throw err;}
   return (dat.toString);})
 );});
