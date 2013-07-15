@@ -7,6 +7,7 @@ app.get('/', function(request, response) {
   response.send(fs.readFileSync('index.txt', encoding='utf8',function(err,dat){
  if (err) { throw err;}
   return (dat.toString());});
+);
 });
 
 var port = process.env.PORT || 5000;
